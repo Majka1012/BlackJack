@@ -68,7 +68,7 @@ while again:
         if another=="n":
             computer.append(deck[random.randint(0,len(deck)-1)])
             
-            while add(computer)<add(cards) and add(cards)<=21 and add(computer)<=21:
+            while add(computer)<17  and add(computer)<=21:
                 computer.append(deck[random.randint(0,len(deck)-1)])
                 
             print(f"Computer's cards: {computer}. Sum: {add(computer)}")
@@ -82,8 +82,8 @@ while again:
                 break
             another=input("Type 'y' to get another card, type 'n' to pass:  ")
             
-    again=input("Do you want to try again? yes/no  ")
-    if again=="yes":
+    again=input("Do you want to try again? y/n  ")
+    if again=="y":
         again=True
         os.system('cls||clear')
     else:
